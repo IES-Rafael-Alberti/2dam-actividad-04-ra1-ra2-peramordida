@@ -4,46 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".calculadoraIMC.CalculadoraIMC">
+    tools:context=".calculadoraIMC.CalculadoraIMC"
+    android:background="@color/black">
 
-    <LinearLayout
-        android:id="@+id/main_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/black">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardaView_men"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/first_line"
+            android:id="@+id/cardViewMen_layout"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="vertical">
 
-            <ToggleButton
-                android:id="@+id/man_button"
+            <ImageView
+                android:id="@+id/cardViewMen_imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <ToggleButton
-                android:id="@+id/woman_button"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_men_icon"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/cardViewMen_textView"
+                android:text="@string/cardaView_men"
+                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardaView_women"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/second_line"
-            android:layout_width="match_parent"
+            android:id="@+id/cardViewWomen_layout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@color/gray"
+            android:orientation="vertical">
 
-            <Switch
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/cardViewWomen_imageView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hola"/>
-
+                app:srcCompat="@drawable/ic_men_icon"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/cardViewWomen_textView"
+                android:text="@string/cardaView_women"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
-
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

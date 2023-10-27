@@ -25,4 +25,6 @@
     <string name="CalculadoraJavi">Calculadora de Javi</string>
     <string name="calcIMC">calculadora de IMC\n</string>
     <string name="imgIMC">Logo IMC</string>
+    <string name="cardaView_men">hombre</string>
+    <string name="cardaView_women">Mujer</string>
 </resources>
