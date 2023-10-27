@@ -15,7 +15,7 @@
         <activity
             android:name=".calculadoraIMC.CalculadoraIMC"
             android:exported="false"
-
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light"    />
         <activity
             android:name=".calculadoraJavi.CalculadoraJavi"
@@ -25,6 +25,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light">
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,12 +36,14 @@
         <activity
             android:name=".calculadoraEloy.CalculadoraEloy"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light"           >
         </activity>
 
         <activity
             android:name=".calculadoraJosema.CalculadoraJosema"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light"            >
         </activity>
     </application>

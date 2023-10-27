@@ -116,11 +116,11 @@
                         <Button
                             android:id="@+id/button7"
                             android:layout_width="wrap_content"
-                            android:layout_height="95dp"
-                            android:layout_margin="2sp"
+                            android:layout_height="95sp"
                             android:text="@string/button_7"
-                            android:textSize="30sp"
-                            tools:ignore="ButtonStyle" />
+                            android:layout_margin="2sp"
+                            tools:ignore="ButtonStyle"
+                            android:textSize="30sp"/>
 
                         <Button
                             android:id="@+id/button8"
