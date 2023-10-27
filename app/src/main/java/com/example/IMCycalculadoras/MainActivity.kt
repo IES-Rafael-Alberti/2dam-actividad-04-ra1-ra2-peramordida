@@ -1,46 +1,45 @@
 package com.example.IMCycalculadoras
 
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import android.view.View
+import android.widget.Button
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.IMCycalculadoras.ui.theme.IMCYCalculadorasTheme
+import com.example.IMCycalculadoras.R
+import com.example.IMCycalculadoras.calculadoraEloy.CalculadoraEloy
+import com.example.IMCycalculadoras.calculadoraIMC.CalculadoraIMC
+import com.example.IMCycalculadoras.calculadoraJavi.CalculadoraJavi
+import com.example.IMCycalculadoras.calculadoraJosema.CalculadoraJosema
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            IMCYCalculadorasTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+        setContentView(R.layout.main_activity)
+        initButtons()
+    }
+
+    fun initButtons() {
+        findViewById<Button>(R.id.button_activityIMC).setOnClickListener {
+            startActivity(Intent(this, CalculadoraIMC::class.java))
+        }
+
+        findViewById<Button>(R.id.button_activityEloy).setOnClickListener{
+            val intent = Intent(this,CalculadoraEloy::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.button_activityJosema).setOnClickListener{
+            startActivity(Intent(this, CalculadoraJosema::class.java))
+        }
+
+        findViewById<Button>(R.id.button_activityJavi).setOnClickListener{
+            startActivity(Intent(this,CalculadoraJavi::class.java))
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    IMCYCalculadorasTheme {
-        Greeting("Android")
+    override fun onClick(v: View?) {
+        TODO("Not yet implemented")
     }
 }
