@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="30dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardaView_men"
@@ -23,8 +23,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:cardCornerRadius="30dp"
-            android:layout_marginEnd="30dp">
+            app:cardCornerRadius="15dp"
+            android:layout_marginEnd="20dp">
 
             <LinearLayout
                 android:id="@+id/cardViewMen_layout"
@@ -59,7 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/cardaView_men"
             app:layout_constraintTop_toTopOf="parent"
-            app:cardCornerRadius="30dp">
+            app:cardCornerRadius="15dp">
 
             <LinearLayout
                 android:id="@+id/cardViewWomen_layout"
