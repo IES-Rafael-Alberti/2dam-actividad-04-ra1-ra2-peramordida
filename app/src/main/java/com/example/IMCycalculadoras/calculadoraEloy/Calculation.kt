@@ -264,7 +264,7 @@ class Calculation {
     /**
      * lleva a estado base, se ejecuta cuando pulsamos CE
      * */
-    private fun clear(){
+    fun clear(){
         num1 = ""
         num2 = ""
         resolution = ""
