@@ -41,7 +41,7 @@
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_men_icon" />
+                    app:srcCompat="@drawable/ic_men_icon"/>
 
                 <TextView
                     android:id="@+id/cardViewMen_textView"
@@ -118,11 +118,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/cms"
+                android:layout_width="wrap_content"
+                android:text="@string/cms"
+                android:layout_height="wrap_content"/>
 
             <com.google.android.material.slider.RangeSlider
-                android:layout_height="100sp"
+                android:id="@+id/rangoAltura"
                 android:layout_width="300sp"
-                android:id="@+id/rangoAltura" />
+                android:layout_height="100sp"
+                android:valueFrom="100"
+                android:valueTo="230"
+                android:contentDescription="@string/cms"
+                android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         </LinearLayout>
 

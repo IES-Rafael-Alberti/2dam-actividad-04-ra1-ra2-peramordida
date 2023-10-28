@@ -28,4 +28,5 @@
     <string name="cardaView_men">hombre</string>
     <string name="cardaView_women">Mujer</string>
     <string name="height">ALTURA</string>
+    <string name="cms">0</string>
 </resources>

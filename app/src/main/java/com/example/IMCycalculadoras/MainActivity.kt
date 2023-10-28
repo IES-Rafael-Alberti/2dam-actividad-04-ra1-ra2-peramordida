@@ -12,7 +12,7 @@ import com.example.IMCycalculadoras.calculadoraIMC.CalculadoraIMC
 import com.example.IMCycalculadoras.calculadoraJavi.CalculadoraJavi
 import com.example.IMCycalculadoras.calculadoraJosema.CalculadoraJosema
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -38,8 +38,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-
-    override fun onClick(v: View?) {
-        TODO("Not yet implemented")
-    }
 }
