@@ -33,9 +33,9 @@ class CalculadoraJavi : AppCompatActivity(), View.OnClickListener {
         initNumbers()
         initOps()
         initMisc()
+        numbersTV.text=""
     }
 
-    //todo corregir %1$s en inicio
     //mi approach ha sido el de no crear variables por botón sino que todos apunten directamente
     //al onClick general, el cual por ID activa un switch ya que todas las órdenes a ejecutar
     //son bastante simples y llaman directamente al objeto
