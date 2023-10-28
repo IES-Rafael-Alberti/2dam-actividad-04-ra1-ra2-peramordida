@@ -6,21 +6,25 @@ import android.widget.TextView
 import com.example.IMCycalculadoras.R
 import java.text.DecimalFormat
 
-class ResultIMCActivity(resultado:Double) : AppCompatActivity() {
+class ResultIMCActivity : AppCompatActivity() {
 
-    val resultado = DecimalFormat("#.##").format(resultado).toDouble()
+    val df = DecimalFormat("#.##")
+
+    lateinit var resultado:String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_imcactivity)
+        resultado = df.format(resultado)
         textFiller()
     }
 
-    fun textFiller(){
+    private fun textFiller(){
 
         findViewById<TextView>(R.id.answer_number).text=resultado.toString()
         val answerText = findViewById<TextView>(R.id.answer_phrase)
 
-        answerText.text = when(resultado){
+        answerText.text = when(resultado.toDouble()){
             in 0f..18.5f->{
                 "Peso inferior al normal"
             }

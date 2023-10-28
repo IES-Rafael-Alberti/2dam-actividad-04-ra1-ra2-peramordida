@@ -25,7 +25,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:cardCornerRadius="15dp"
-            android:layout_marginEnd="20dp">
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true">
 
             <LinearLayout
                 android:id="@+id/cardViewMen_layout"
@@ -34,9 +36,7 @@
                 android:background="@color/slight_dark_blue"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:clickable="true"
-                android:focusable="true">
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/cardViewMen_imageView"
