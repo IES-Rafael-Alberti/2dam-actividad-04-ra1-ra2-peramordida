@@ -35,4 +35,6 @@
     <string name="default_age">20</string>
     <string name="centimeters">CM</string>
     <string name="calcular">CALCULAR</string>
+    <string name="resultado">RESULTADO\n__________________</string>
+    <string name="aswer_message">Según tus datos, tienes</string>
 </resources>
