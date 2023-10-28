@@ -29,4 +29,10 @@
     <string name="cardaView_women">Mujer</string>
     <string name="height">ALTURA</string>
     <string name="cms">0</string>
+    <string name="weight">70</string>
+    <string name="weight_text">PESO</string>
+    <string name="age_text">EDAD</string>
+    <string name="default_age">20</string>
+    <string name="centimeters">CM</string>
+    <string name="calcular">CALCULAR</string>
 </resources>
