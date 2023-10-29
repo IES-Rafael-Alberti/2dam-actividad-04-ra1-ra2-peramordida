@@ -2,10 +2,10 @@ package com.example.IMCycalculadoras.calculadoraIMC
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.IMCycalculadoras.R
 import com.example.IMCycalculadoras.ResultIMCActivity.ResultIMCActivity
@@ -81,11 +81,11 @@ class CalculadoraIMC : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.calculate_button).setOnClickListener {
-            val resultado = weight.text.toString().toDouble()/(heigh.text.toString().toDouble()/100).pow(2)
-            val actividad = ResultIMCActivity()
-            actividad.resultado = resultado.toString()
-            val intent = Intent(this,actividad::class.java)
-            startActivity(intent)
+            var value = (weight.text.toString().toDouble()/(heigh.text.toString().toDouble()/100).pow(2)).toString()
+
+            val i = Intent(this, ResultIMCActivity::class.java)
+            i.putExtra("key", value)
+            startActivity(i)
         }
 
     }
