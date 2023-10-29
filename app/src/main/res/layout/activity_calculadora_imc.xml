@@ -27,7 +27,8 @@
             app:cardCornerRadius="15dp"
             android:layout_marginEnd="20dp"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:onClick="onClick">
 
             <LinearLayout
                 android:id="@+id/cardViewMen_layout"
@@ -57,7 +58,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardaView_women"
+            android:id="@+id/cardView_women"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
