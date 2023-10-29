@@ -16,5 +16,6 @@
     <color name="dark_blue">#11091D</color>
     <color name="slight_dark_blue">#352B42</color>
     <color name="blue">#26005F</color>
-
+    <color name="calc_javi_background">#45455D</color>
+    <color name="ic_icon_background">#4F2395</color>
 </resources>
