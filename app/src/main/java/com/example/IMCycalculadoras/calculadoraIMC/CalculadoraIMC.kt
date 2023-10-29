@@ -15,17 +15,18 @@ import kotlin.math.pow
 
 class CalculadoraIMC : AppCompatActivity() {
 
-    lateinit var genderButtons : Array<CardView>
-
+    /**es el slider de altura*/
     lateinit var heighSlider : RangeSlider
 
+    /**es el cuadro de la altura, en cms*/
     lateinit var heigh : TextView
 
+    /**es el cuadro de la edad, el numero de años*/
     lateinit var age : TextView
 
+    /**es el cuadro de peso, numero en kgs*/
     lateinit var weight : TextView
 
-    var genero = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora_imc)
@@ -33,6 +34,7 @@ class CalculadoraIMC : AppCompatActivity() {
 
     }
 
+    /**se ejecuta al iniciar, inicia to'do*/
     private fun init(){
 
         heigh = findViewById<TextView>(R.id.cms)
@@ -40,8 +42,6 @@ class CalculadoraIMC : AppCompatActivity() {
         heighSlider = findViewById<RangeSlider>(R.id.heigh_range)
 
         initRangeSlider()
-
-        genderButtons = arrayOf(findViewById(R.id.cardView_men), findViewById(R.id.cardaView_women))
 
         age = findViewById(R.id.age)
 
@@ -51,6 +51,7 @@ class CalculadoraIMC : AppCompatActivity() {
 
     }
 
+    /**inicia el rangeSlider*/
     private fun initRangeSlider(){
 
         heighSlider.addOnChangeListener { _, value, _ ->
@@ -59,6 +60,7 @@ class CalculadoraIMC : AppCompatActivity() {
         heighSlider.stepSize = 1f
     }
 
+    /**inicia los botones, los dos de peso y los dos de edad y el de calcular*/
     @SuppressLint("SetTextI18n")
     private fun initButtons(){
 
@@ -79,10 +81,11 @@ class CalculadoraIMC : AppCompatActivity() {
             val edad = age.text
             if(edad.toString().toInt()<120) age.text = (edad.toString().toInt()+1).toString()
         }
-
+        //la formula es peso / altura(m)^2, hacemos la operacion y la pasamos a String
         findViewById<Button>(R.id.calculate_button).setOnClickListener {
             var value = (weight.text.toString().toDouble()/(heigh.text.toString().toDouble()/100).pow(2)).toString()
 
+            //generamos un intent, le damos el dato de value con putExtra
             val i = Intent(this, ResultIMCActivity::class.java)
             i.putExtra("key", value)
             startActivity(i)
