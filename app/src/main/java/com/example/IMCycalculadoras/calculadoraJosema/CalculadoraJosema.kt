@@ -88,6 +88,7 @@ class CalculadoraJosema: AppCompatActivity()  {
                 if (comprobarSignos(calculo.operacion) && numero1.isNotEmpty() && numero2.isNotEmpty()){
                     resultado.text = calculo.Calcular().toString()
                     calculo.operacion = ""
+
                 }else Toast.makeText(this,"error, faltan datos",2.toInt()).show()
             }catch (e:Exception){
                 Toast.makeText(this,"error, falta un numero",2.toInt()).show()
