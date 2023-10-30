@@ -77,8 +77,10 @@ class CalculadoraJosema: AppCompatActivity()  {
         }
 
         boton_igual.setOnClickListener {
-            resultado.text = calculo.Calcular().toString()
-            calculo.operacion = ""
+            if (!comprobarPuntos(calculo.operacion) && !comprobarSignos(calculo.operacion)){
+                resultado.text = calculo.Calcular().toString()
+                calculo.operacion = ""
+            }
         }
 
         boton1.setOnClickListener {
