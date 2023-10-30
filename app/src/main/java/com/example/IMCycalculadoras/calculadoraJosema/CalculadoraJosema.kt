@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.IMCycalculadoras.R
 
@@ -77,9 +78,19 @@ class CalculadoraJosema: AppCompatActivity()  {
         }
 
         boton_igual.setOnClickListener {
-            if (!comprobarPuntos(calculo.operacion) && !comprobarSignos(calculo.operacion)){
-                resultado.text = calculo.Calcular().toString()
-                calculo.operacion = ""
+
+            try {
+
+                val numero1 = calculo.operacion.split("+","x","-","/")[0]
+
+                val numero2 = calculo.operacion.split("+","x","-","/")[0]
+
+                if (comprobarSignos(calculo.operacion) && numero1.isNotEmpty() && numero2.isNotEmpty()){
+                    resultado.text = calculo.Calcular().toString()
+                    calculo.operacion = ""
+                }else Toast.makeText(this,"error, faltan datos",2.toInt()).show()
+            }catch (e:Exception){
+                Toast.makeText(this,"error, falta un numero",2.toInt()).show()
             }
         }
 
