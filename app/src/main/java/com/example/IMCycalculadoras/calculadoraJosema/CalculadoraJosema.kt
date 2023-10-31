@@ -83,7 +83,7 @@ class CalculadoraJosema: AppCompatActivity()  {
 
                 val numero1 = calculo.operacion.split("+","x","-","/")[0]
 
-                val numero2 = calculo.operacion.split("+","x","-","/")[0]
+                val numero2 = calculo.operacion.split("+","x","-","/")[1]
 
                 if (comprobarSignos(calculo.operacion) && numero1.isNotEmpty() && numero2.isNotEmpty()){
                     resultado.text = calculo.Calcular().toString()
